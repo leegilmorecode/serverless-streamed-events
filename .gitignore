@@ -1,0 +1,7 @@
+.DS_Store
+payment-service/cdk-outputs.json
+stock-service/cdk-outputs.json
+infra/cdk-outputs.json
+node_modules
+*.js
+*.d.ts
