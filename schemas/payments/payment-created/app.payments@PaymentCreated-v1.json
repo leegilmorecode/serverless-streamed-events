@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "PaymentCreated",
+  "definitions": {
+    "PaymentCreated": {
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "accountNumber": {
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "event": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "subscriptionId": {
+          "type": "string"
+        },
+        "updated": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "created",
+        "_id",
+        "accountNumber",
+        "event",
+        "subscriptionId",
+        "updated",
+        "status"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "account": {
+      "type": "string"
+    },
+    "detail": {
+      "$ref": "#/definitions/PaymentCreated"
+    },
+    "detail-type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "resources": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "type": "string"
+    },
+    "time": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "detail-type",
+    "resources",
+    "detail",
+    "id",
+    "source",
+    "time",
+    "region",
+    "version",
+    "account"
+  ],
+  "type": "object",
+  "x-amazon-events-detail-type": "PaymentCreated",
+  "x-amazon-events-source": "app.payments"
+}

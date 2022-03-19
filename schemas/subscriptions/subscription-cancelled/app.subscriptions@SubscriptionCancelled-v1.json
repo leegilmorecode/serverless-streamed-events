@@ -1,0 +1,109 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SubscriptionCancelled"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "AWSEvent": {
+        "type": "object",
+        "required": [
+          "detail-type",
+          "resources",
+          "detail",
+          "id",
+          "source",
+          "time",
+          "region",
+          "version",
+          "account"
+        ],
+        "x-amazon-events-detail-type": "SubscriptionCancelled",
+        "x-amazon-events-source": "app.subscriptions",
+        "properties": {
+          "detail": {
+            "$ref": "#/components/schemas/SubscriptionCancelled"
+          },
+          "account": {
+            "type": "string"
+          },
+          "detail-type": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "resources": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "source": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "SubscriptionCancelled": {
+        "type": "object",
+        "required": [
+          "customerSurname",
+          "accountName",
+          "customerFirstName",
+          "accountSortCode",
+          "id",
+          "accountNumber",
+          "event",
+          "subscriptionId",
+          "updated",
+          "status"
+        ],
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "accountNumber": {
+            "type": "string"
+          },
+          "accountSortCode": {
+            "type": "string"
+          },
+          "customerFirstName": {
+            "type": "string"
+          },
+          "customerSurname": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "subscriptionId": {
+            "type": "string"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

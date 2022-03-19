@@ -1,0 +1,38 @@
+{
+  "info": {
+    "_postman_id": "2bc6ccd5-c166-4318-bec2-28603eeab551",
+    "name": "serverless-subscription-events",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Subscription",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"accountNumber\": \"acc-111\",\n    \"accountName\": \"Bob Jamison\",\n    \"accountSortCode\": \"12-12-34\",\n    \"customerFirstName\": \"Bob\",\n    \"customerSurname\": \"Jamison\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{url}}/subscriptions/",
+          "protocol": "https",
+          "host": ["{{url}}"],
+          "path": ["subscriptions", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "something.execute-api.eu-west-1.amazonaws.com"
+    }
+  ]
+}

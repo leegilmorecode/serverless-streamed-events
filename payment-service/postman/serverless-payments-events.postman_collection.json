@@ -1,0 +1,38 @@
+{
+  "info": {
+    "_postman_id": "52200e28-f45e-480b-b2e2-6a1bde16745a",
+    "name": "serverless-payments-events",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cancel Payment (Direct Debit)",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"subscriptionId\": \"04ee0ace-03de-4fdd-8de9-3b9da00fb226\",\n    \"status\": \"cancelled\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{url}}/payments/04ee0ace-03de-4fdd-8de9-3b9da00fb226",
+          "protocol": "https",
+          "host": ["{{url}}"],
+          "path": ["payments", "04ee0ace-03de-4fdd-8de9-3b9da00fb226"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "something.execute-api.eu-west-1.amazonaws.com/prod"
+    }
+  ]
+}
