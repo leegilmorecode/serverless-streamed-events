@@ -6,7 +6,7 @@ Example of streaming events using EventBridge, DocumentDB and DynamoDB.
 
 How to stream domain events based on database changes in DynamoDB and DocumentDB with EventBridge, with visuals and code examples written in TypeScript and the CDK
 
-You can view the article here: [Serverless Streamed Events 🚀](/)
+You can view the article here: [Serverless Streamed Events 🚀](https://leejamesgilmore.medium.com/serverless-streamed-events-ada6ed9a9ecf)
 
 ![image](./docs/images/header.png)
 
