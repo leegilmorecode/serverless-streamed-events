@@ -6,6 +6,7 @@ const ajvOptions = {
 };
 
 // as this is not a monorepo and an example repo only we are using a typescript path alias
+// whereas this would typically be published to npm and reused in all domain service
 export function validate(
   obj: Record<string, any>,
   schema: Record<string, any>,
