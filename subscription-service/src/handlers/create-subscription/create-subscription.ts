@@ -35,7 +35,7 @@ export const createSubscriptionHandler: APIGatewayProxyHandler = async ({
       updated: new Date().toISOString(),
     };
 
-    console.log(`subscription: ${subscription}`);
+    console.log(`subscription: ${JSON.stringify(subscription)}`);
 
     const params: AWS.DynamoDB.DocumentClient.PutItemInput = {
       TableName: config.subscriptionsTable,

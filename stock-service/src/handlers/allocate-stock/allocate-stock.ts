@@ -22,6 +22,8 @@ export const allocateStockHandler: Handler<EventBridgeEvent<any, any>> = async (
 
     const stockTable = process.env.TABLE_NAME as string;
 
+    console.log(`event: ${JSON.stringify(event)}`);
+
     const { "detail-type": detailType, id, detail } = event;
 
     console.log(
